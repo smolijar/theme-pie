@@ -24,6 +24,7 @@ $ omf install pie
 * 🎨 Native colors (changes with your preferences)
 * ⏰ Human readable execution time of last command
 * 📂 Shortened cwd
+* ✅ Last status success
 * 🔁 Git status
     - Current branch
     - Dirty working directory
@@ -34,7 +35,7 @@ $ omf install pie
 ## Screenshot
 
 <p align="center">
-<img src="{{SCREENSHOT_URL}}">
+<img src="https://i.imgur.com/UQKCSsm.gif">
 </p>
 
 

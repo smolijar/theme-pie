@@ -11,25 +11,25 @@ function fish_prompt
 
     if git_is_repo
         echo -n -s $branch_color (git_branch_name) $normal_color
-        set_color -d
-        echo -n $meta_color
+        set -l git_meta ""
         if git_is_touched
-            echo -n -s " "
-            git_is_staged && echo -n -s "●"
-            git_is_dirty && echo -n -s "⨯"
+            git_is_staged && set git_meta "$git_meta●"
+            git_is_dirty && set git_meta "$git_meta⨯"
         end
         set -l commit_count (command git rev-list --count --left-right (git remote)/(git_branch_name)"...HEAD" 2> /dev/null)
         if test $commit_count
             set -l behind (echo $commit_count | cut -f 1)
             set -l ahead (echo $commit_count | cut -f 2)
             if test $behind -gt 0
-                echo -n -s "🠋"
+                set git_meta "$git_meta🠋"
             end
             if test $ahead -gt 0
-                echo -n -s "🠉"
+                set git_meta "$git_meta🠉"
             end
         end
-        echo -n -s " " $normal_color
+        if test $git_meta
+            echo -n -s $meta_color " " $git_meta " " $normal_color
+        end
     end
 
     if test $last_command_status -eq 0

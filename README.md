@@ -27,9 +27,11 @@ $ omf install pie
 * ✅ Last status success
 * 🔁 Git status
     - Current branch
-    - Dirty working directory
-    - Staged files
-    - Upstream status
+    - Untracked files `?`
+    - Stashed changes `$`
+    - Dirty working directory `●`
+    - Staged files `⨯`
+    - Upstream status `🠋`, `🠉`
 
 
 ## Screenshot

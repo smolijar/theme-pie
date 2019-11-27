@@ -35,6 +35,8 @@ function fish_prompt
         end
         if test $git_meta
             echo -n -s $meta_color " " $git_meta " " $normal_color
+        else
+            echo -n -s " "
         end
     end
 

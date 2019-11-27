@@ -17,6 +17,14 @@ A minimalist developer-friendly shell prompt for fish shell
 ```fish
 $ omf install pie
 ```
+This method is blocked by [#105](https://github.com/oh-my-fish/packages-main/pull/105), until then if you're using OMF:
+
+```bash
+# download to omf's theme folder
+git clone git@github.com:grissius/theme-pie.git ~/.local/share/omf/themes/pie
+# apply theme
+omf theme pie
+```
 
 
 ## Features
